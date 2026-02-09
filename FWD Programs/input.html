@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration Form</title>
+</head>
+
+<body align="center" bgcolor=" lightblue">
+    <h1>Student Profile</h1>
+    <form>
+        <label for="fname">First Name:</label><br>
+        <input type="text" name="fname"><br>
+        <br>
+        <label for="lname">Last Name:</label><br>
+        <input type="text" name="lname"><br>
+        <br>
+        <label for="Email">Email ID:</label><br>
+        <input type="text" name="Email"><br>
+        <br>
+        <label for="Contact">Contact Number:</label><br>
+        <input type="text" name="Contact"><br>
+        <br>
+        <br>
+        <label for="Gender">Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label><br>
+
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br>
+        <br>
+        <label for="Communication Address">Communication Address:</label><br>
+        <textarea name="address" rows="10" cols="30"></textarea><br>
+        <br>
+        <label for="Branch">Branch:</label><br>
+        <select id="branch" name="branch">
+            <option value="Select Branch">Select Branch</option>
+            <option value="CSE">CSE</option>
+            <option value="ECE">ECE</option>
+            <option value="AI&DS">AI&DS</option>
+            <option value="CSIT">CSIT</option>
+        </select><br>
+        <br>
+        <input type="submit">
+    </form>
+</body>

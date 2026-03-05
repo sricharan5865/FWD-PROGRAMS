@@ -1,0 +1,73 @@
+<!DOCTYPE html> <!-- Declares the document type as HTML5 -->
+<html lang="en"> <!-- Root element specifying English as the primary language -->
+
+<head> <!-- Metadata and head section of the document -->
+    <!-- CO1: Internet Fundamentals, HTML Document Structure & CO5: Implement meta tags for SEO-friendly pages -->
+    <meta charset="UTF-8"> <!-- Specifies UTF-8 character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ensures responsive design on mobile devices -->
+    <title>Virtual Sharing for Better Learning</title> <!-- The title shown in the browser tab -->
+    <meta name="description"
+        content="A centralized platform where students upload and access study materials, managed securely by an admin.">
+    <!-- SEO description -->
+
+    <!-- CO1: Introductory CSS Styling - External Stylesheet Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Pre-connects to Google Fonts server -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Pre-connects with cross-origin support -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet"> <!-- Imports the 'Inter' font family from Google Fonts -->
+    <link rel="stylesheet" href="styles.css"> <!-- Links the external custom styling file (CSS) -->
+</head> <!-- Closing the head section -->
+
+<body class="grid-bg"> <!-- The main body of the page with a background grid class -->
+
+    <!-- CO2: Semantic & Structured Content - Semantic tags (<nav>) -->
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="main-nav"> <!-- Sticky navigation bar at the top -->
+        <!-- CO1: HTML Headings, Paragraphs, Links (Structure) -->
+        <div class="nav-brand" onclick="window.app.navigate('Home')">
+            <!-- Brand logo and name section, clickable to home -->
+            <div class="nav-logo"> <!-- Container for the brand logo icon -->
+                <!-- CO2: Media tags / SVGs - Vector graphic logo representation -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                        d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                    </path>
+                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                    <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                </svg>
+            </div> <!-- End of nav-logo -->
+            <span class="nav-title">Virtual Sharing <span class="nav-subtitle">for Better Learning</span></span>
+            <!-- App name -->
+        </div> <!-- End of nav-brand -->
+
+        <div class="nav-links-container" id="nav-links"> <!-- Dynamic menu items container -->
+            <!-- Nav Items Injected by JS (Home, Browse, Upload, etc.) -->
+        </div>
+
+        <div class="nav-actions"> <!-- Right side navigation actions (User profile & Logout) -->
+            <div class="user-info" id="user-info"> <!-- Displays user "Hello, RollNumber (Role)" -->
+                <!-- User Info Injected by JS -->
+            </div>
+            <button onclick="window.app.logout()" class="btn-exit" id="exit-btn"> <!-- Universal Logout button -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                    <polyline points="16 17 21 12 16 7"></polyline>
+                    <line x1="21" y1="12" x2="9" y2="12"></line>
+                </svg>
+                Exit <!-- Label for the logout icon -->
+            </button>
+        </div> <!-- End of nav-actions -->
+    </nav> <!-- End of Navigation -->
+
+    <!-- Main Content Area -->
+    <main id="app-root" class="app-root fade-in"> <!-- Primary injection point for different views / pages -->
+        <!-- All page content (Home, Dashboard, Repository) Injected by JS -->
+    </main>
+
+    <script src="app.js"></script> <!-- Link to the main JavaScript logic file (Application Logic) -->
+</body> <!-- Closing the body tag -->
+
+</html> <!-- End of the HTML document -->
